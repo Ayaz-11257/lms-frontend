@@ -9,3 +9,9 @@ cd lms-frontend
 npm i
 4. run the server
 npm run dev
+```
+
+### setup instructions foor tailwind
+tailwind official website
+
+add tailwind directives at the top of the index.css file

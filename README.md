@@ -10,7 +10,7 @@ npm i
 4. run the server
 npm run dev
 ```
-
+```
 ### setup instructions foor tailwind
 tailwind official website
 

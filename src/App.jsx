@@ -1,19 +1,20 @@
 import './App.css';
 
-import{ Routes } from 'react-router-dom';
+import{ Routes, Route } from 'react-router-dom';
 
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
+// import HomeLayout from './Layouts/HomeLayout.jsx';
+import HomePage from './Pages/HomePage.jsx';
 
 function App() {
 
   return (
     <>
-        {/* <Routes> */}
-          {/* <Route path="/" element={<Home />} ></Routes */}
-        {/* </Routes> */}
-        <Footer />
+        <Routes>
+          <Route path="/" element={<HomePage />} ></Route>
+        </Routes>
     </>
   )
 }
 
-export default App
+export default App;

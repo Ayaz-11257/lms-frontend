@@ -164,7 +164,7 @@ function HomeLayout({ children }) {
               
             )}
             {isLoggedIn && (
-              <li className="absolute bottom-4 w-[90%]">
+              // <li className="absolute bottom-4 w-[90%]"> yeh wala li kuch problem kar rha hai
               <div className="w-full flex items-center justify-center space-x-1">
                 <button className="btn-primary bg-orange-600 px-4 py-1 font-semibold rounded-md w-full hover:bg-orange-800">
                   <Link to='/user/profile'>Profile</Link>
@@ -173,7 +173,7 @@ function HomeLayout({ children }) {
                   <Link onClick={handleLogout}>Logout</Link>
                 </button>
               </div>
-              </li>
+              // {/* </li> */}
             )}
           </ul>
         </div>

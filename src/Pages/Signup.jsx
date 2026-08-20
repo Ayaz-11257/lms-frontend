@@ -45,7 +45,7 @@ function Signup(){
         }
     }
 
-    function createNewAccount(event) {
+   async function createNewAccount (event) {
         event.preventDefault();
         if(!signupData.email || !signupData.password || !signupData.fullName) {
             toast.error("Please fill all the details");
@@ -74,7 +74,7 @@ function Signup(){
         formData.append("avatar", signupData.avatar);
 
         // dispatch create account action
-        const response = dispatch(createAccount(formData));
+        const response =  await dispatch(createAccount(formData));
         console.log(response);
         if(response?.payload?.success)
           navigate("/");

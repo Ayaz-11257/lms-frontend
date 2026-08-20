@@ -158,7 +158,7 @@ function HomeLayout({ children }) {
                   <Link to='/login'>Login</Link>
                 </button>
                 <button className="btn-secondary bg-orange-600 px-3 py-1 font-semibold rounded-md w-full hover:bg-orange-800">
-                  <Link to='/login'>Signup</Link>
+                  <Link to='/signup'>Signup</Link>
                 </button>
               </div>
               

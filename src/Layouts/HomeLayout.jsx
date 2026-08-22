@@ -81,6 +81,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FiMenu } from "react-icons/fi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../Redux/Slices/AuthSlice.js";
 import Footer from '../Components/Footer'; 
 
 function HomeLayout({ children }) {
@@ -94,10 +95,10 @@ function HomeLayout({ children }) {
   // for displaying options according to the role
   const role = useSelector((state) => state?.auth?.role);
 
-  function handleLogout(e){
+  async function handleLogout(e){
     e.preventDefault();
-    // const res = await dispatch(logout());
-    // if(res?.payload?.success)
+    const res = await dispatch(logout());
+    if(res?.payload?.success)
     navigate('/')
   }
 

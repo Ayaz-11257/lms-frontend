@@ -134,6 +134,9 @@ function HomeLayout({ children }) {
               >
                 <AiFillCloseCircle size={32}  />
               </button>
+            </li> 
+            <li>
+              <Link to='/'>Home</Link>
             </li>
             
             {isLoggedIn && role === 'ADMIN' && (

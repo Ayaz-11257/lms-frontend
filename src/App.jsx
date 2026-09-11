@@ -22,6 +22,7 @@ import Checkout from './Pages/Payment/Checkout.jsx';
 import CheckoutSuccess from './Pages/Payment/CheckoutSuccess.jsx';
 import CheckoutFailure from './Pages/Payment/CheckoutFailure.jsx';
 import DisplayLectures from './Pages/Dashboard/DisplayLectures.jsx';
+import AddLecture from './Pages/Dashboard/AddLecture.jsx';
 
 
 function App() {
@@ -44,16 +45,17 @@ function App() {
            <Route path="*" element={<NotFound />} ></Route> 
 
            <Route element={<RequireAuth allowedRoles={["ADMIN"]} />}>
-          <Route path="/course/create" element={<CreateCourse />} ></Route>
+          <Route path="/course/create" element={<CreateCourse />} />
+          <Route path="/course/addlecture" element={<AddLecture />} />
           </Route>
 
           <Route element={<RequireAuth allowedRoles={["ADMIN", "USER"]} />}>
-          <Route path="/user/profile" element={<Profile />} ></Route>
-          <Route path="/user/editprofile" element={<EditProfile />} ></Route>
-          <Route path="/checkout" element={<Checkout />} ></Route>
-          <Route path="/checkout/success" element={<CheckoutSuccess />} ></Route>
-          <Route path="/checkout/fail" element={<CheckoutFailure />} ></Route>
-          <Route path="/course/displaylectures" element={<DisplayLectures />} ></Route>
+          <Route path="/user/profile" element={<Profile />} />
+          <Route path="/user/editprofile" element={<EditProfile />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/success" element={<CheckoutSuccess />} />
+          <Route path="/checkout/fail" element={<CheckoutFailure />} />
+          <Route path="/course/displaylectures" element={<DisplayLectures />} />
           </Route>
         </Routes>
     </>

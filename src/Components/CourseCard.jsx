@@ -3,7 +3,7 @@ function CourseCard({ data }) {
     const navigate = useNavigate();
 
     return (
-        <div onClick={() => navigate('/course/description/')} className='text-white w-[22rem] h-[430px] shadow-lg rounded-lg cursor-pointer group overflow-hidden bg-zinc-700'>
+        <div onClick={() => navigate('/course/description/', {state: { ...data }})} className='text-white w-[22rem] h-[430px] shadow-lg rounded-lg cursor-pointer group overflow-hidden bg-zinc-700'>
             <div className='overflow-hidden'>
                 <img src={data?.thumbnail?.secure_url} alt="course thumbnail" className='h-48 w-full rounded-tr-lg rounded-tl-lg group-hover:scale[1,2] transition-all ease-in-out duration-300' />
                 <div className='p-3 space-y-1 text-white'>
@@ -19,7 +19,7 @@ function CourseCard({ data }) {
                     </p>
                     <p className='font-semibold'>
                         <span className='text-yellow-500 font-bold'> Total lectures :</span>
-                        {data?.numberoflectures}
+                        {data?.numberOfLectures ?? 0}
                     </p>
                     <p className='font-semibold'>
                         <span className='text-yellow-500 font-bold'> Instructor:</span>

@@ -62,7 +62,7 @@ function DisplayLectures() {
                                 {role === "ADMIN" && (
                                     <button
                                         onClick={() => navigate("/course/addlecture", { state: { ...state } })}
-                                        className=" btn btn-primary bg-yellow-600 hover:bg-yellow-500 px-2 py-1 rounded-md font-semibold text-sm"
+                                        className=" btn btn-primary bg-yellow-600 hover:bg-yellow-500 px-2 py-1 rounded-md font-semibold text-sm text-white"
                                     >
                                         Add new lecture
                                     </button>

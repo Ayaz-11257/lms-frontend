@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getRazorPayId, purchaseCourseBundle, verifyUserPayment } from "../../Redux/Slices/RazorpaySlice";
+import { getRazorPayId, purchaseCourseBundle, verifyUserPayment } from "../../Redux/Slices/RazorpaySlice.js";
 import toast from "react-hot-toast";
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "../../Layouts/HomeLayout.jsx";
 import { BiRupee } from "react-icons/bi";
 
 function Checkout(){

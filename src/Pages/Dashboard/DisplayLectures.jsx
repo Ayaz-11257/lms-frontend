@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "../../Layouts/HomeLayout.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCourseLecture, getCourseLectures } from "../../Redux/Slices/LectureSlice.js";

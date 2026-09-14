@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import toast from "react-hot-toast";
-import HomeLayout from "../../Layouts/HomeLayout";
-import { changePassword } from "../../Redux/Slices/AuthSlice";
+import HomeLayout from "../../Layouts/HomeLayout.jsx";
+import { changePassword } from "../../Redux/Slices/AuthSlice.js";
 
 function ChangePassword() {
   const dispatch = useDispatch();

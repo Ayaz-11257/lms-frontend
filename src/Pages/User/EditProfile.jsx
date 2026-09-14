@@ -1,7 +1,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserData, updateProfile } from "../../Redux/Slices/AuthSlice";
+import { getUserData, updateProfile } from "../../Redux/Slices/AuthSlice.js";
 import { Link, useNavigate } from "react-router-dom";
 import HomeLayout from "../../Layouts/HomeLayout";
 import { BsPersonCircle } from "react-icons/bs";

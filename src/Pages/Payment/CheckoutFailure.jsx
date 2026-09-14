@@ -1,5 +1,5 @@
 import { RxCrossCircled } from "react-icons/rx";
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "../../Layouts/HomeLayout.jsx";
 import { Link } from "react-router-dom";
 
 function CheckoutFailure(){

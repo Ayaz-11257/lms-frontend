@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CarouselSlide from "../Components/CarouselSlide";
-import HomeLayout from "../Layouts/HomeLayout";
+import CarouselSlide from "../Components/CarouselSlide.jsx";
+import HomeLayout from "../Layouts/HomeLayout.jsx";
 
 function AboutUs() {
   const [currentSlide, setCurrentSlide] = useState(1);

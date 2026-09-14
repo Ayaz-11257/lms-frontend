@@ -1,8 +1,8 @@
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
-import { createNewCourse } from "../../Redux/Slices/CourseSlice";
-import HomeLayout from "../../Layouts/HomeLayout";
+import { createNewCourse } from "../../Redux/Slices/CourseSlice.js";
+import HomeLayout from "../../Layouts/HomeLayout.jsx";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useState } from "react";
  

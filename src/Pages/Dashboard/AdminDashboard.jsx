@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "../../Layouts/HomeLayout.jsx";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from "chart.js";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { deleteCourse, getAllCourses } from "../../Redux/Slices/CourseSlice";
-import { getStatsData } from "../../Redux/Slices/StatSlice";
-import { getPaymentRecord } from "../../Redux/Slices/RazorpaySlice";
+import { deleteCourse, getAllCourses } from "../../Redux/Slices/CourseSlice.js";
+import { getStatsData } from "../../Redux/Slices/StatSlice.js";
+import { getPaymentRecord } from "../../Redux/Slices/RazorpaySlice.js";
 import { Pie, Bar } from 'react-chartjs-2';
 import { FaUsers } from "react-icons/fa";
 import { FcSalesPerformance } from "react-icons/fc";

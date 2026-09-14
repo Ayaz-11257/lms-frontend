@@ -59,23 +59,6 @@ export const logout = createAsyncThunk("/auth/logout", async () => {
     }
 })
 
-// export const updateProfile = createAsyncThunk("/user/update/profile", async ({id, data}) => {
-//     try {
-//         const res = axiosInstance.put(`user/update/${id}`, data);
-//         toast.promise(res, {
-//             loading: "Wait!profile update in progress...",
-//             success: (data) => {
-//                 return data?.data?.message;
-//             },
-//             error: "Failed to update profile"
-//         });
-
-//         return (await res).data;
-//     } catch(error) {
-//         toast.error(error?.response?.data?.message);
-//     }
-// })
-
 export const updateProfile = createAsyncThunk(
   "/user/update/profile",
   async ({ id, formData }) => {
@@ -104,6 +87,23 @@ export const getUserData = createAsyncThunk("/user/details", async () => {
         toast.error(error.message);
     }
 })
+
+export const changePassword = createAsyncThunk(
+  "/auth/changepassword",
+  async (userPassword) => {
+    try {
+      const res = axiosInstance.post("user/changepassword", userPassword);
+      toast.promise(res, {
+        loading: "Changing password...",
+        success: (data) => data?.data?.message,
+        error: "Failed to change password"
+      });
+      return (await res).data;
+    } catch (error) {
+      toast.error(error?.response?.data?.message);
+    }
+  }
+);
 
 
 const authSlice = createSlice({

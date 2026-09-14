@@ -10,7 +10,7 @@ function CheckoutSuccess(){
 
     useEffect(() => {
         dispatch(getUserData());
-    })
+    }, [dispatch])
     return (
         <HomeLayout>
             <div className="min-h-[90vh] flex items-center justify-center text-white">

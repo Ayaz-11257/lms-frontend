@@ -1,25 +1,39 @@
-function CarouselSlide({image, title, description, slideNumber, totalSlides}){
-    return(
-   <div id={`slide${slideNumber}`} className="carousel-item relative w-full">
-         <div className="flex flex-col items-center justify-center gap-4 px-[15%]">
-            <img
-            // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRepUFtoOVC-lqtJ0q_FiAvOzBHw7EZTOWEK2zt9uNg1A&s=10"
-            src={image}
-            alt="Tailwind CSS slide example"
-            className="w-40  rounded-full border-2 border-gray-400"
-            />
-            <p className="text-xl text-gray-200">
-            {"Education is the most powerful tool you can use to change the world."}
-            </p>
-            <h3 className="text-2xl font-semibold">{title}</h3>
-            <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href={`#slide${(slideNumber == 1 ? totalSlides : (slideNumber - 1))}`} className="btn btn-circle">❮</a>
-                {/* some logic problem for below code  */}
-                <a href={`#slide${(slideNumber) % totalSlides + 1}`} className="btn btn-circle">❯</a>
-            </div>
-        </div>
-  </div>
-    );
+function CarouselSlide({ image, title, description, isActive, prevSlide, nextSlide }) {
+  if (!isActive) return null;
+
+  return (
+    <div className="relative w-full flex flex-col items-center justify-center transition-all duration-500 ease-in-out">
+      <div className="flex flex-col items-center justify-center gap-4 px-[15%] text-center w-full min-h-[320px]">
+        <img
+          src={image}
+          alt={title}
+          className="w-40 h-40 object-cover rounded-full border-2 border-gray-400"
+        />
+        <p className="text-xl text-gray-200">
+          {description}
+        </p>
+        <h3 className="text-2xl font-semibold">{title}</h3>
+      </div>
+
+      {/* Slide Navigation Buttons */}
+      <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between pointer-events-none px-4">
+        <button
+          type="button"
+          onClick={prevSlide}
+          className="btn btn-circle bg-gray-800 text-white hover:bg-gray-700 border-none pointer-events-auto"
+        >
+          ❮
+        </button>
+        <button
+          type="button"
+          onClick={nextSlide}
+          className="btn btn-circle bg-gray-800 text-white hover:bg-gray-700 border-none pointer-events-auto"
+        >
+          ❯
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default CarouselSlide;

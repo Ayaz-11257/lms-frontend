@@ -55,7 +55,6 @@ function EditProfile(){
         formData.append("fullName", data.fullName);
         formData.append("avatar", data.avatar);
 
-        // await dispatch(updateProfile(data.userId, data));
         await dispatch(updateProfile({ id: data.userId, formData }));
 
         await dispatch(getUserData());

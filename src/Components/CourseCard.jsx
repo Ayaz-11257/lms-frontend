@@ -19,7 +19,7 @@ function CourseCard({ data }) {
                     </p>
                     <p className='font-semibold'>
                         <span className='text-yellow-500 font-bold'> Total lectures :</span>
-                        {data?.numbersOfLectures ?? 0}
+                        {data?.numbersOfLectures || data?.lectures?.length || 0}
                     </p>
                     <p className='font-semibold'>
                         <span className='text-yellow-500 font-bold'> Instructor:</span>

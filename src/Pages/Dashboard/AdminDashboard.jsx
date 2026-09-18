@@ -137,41 +137,41 @@ function AdminDashboard(){
                         Create new course
                     </button>
                 </div>
-                <div>
-                <table className="table w-full">
-                    <thead>
+                <div className="w-full overflow-x-auto rounded-xl border border-gray-700 bg-gray-900/60 shadow-2xl backdrop-blur-sm">
+                <table className="w-full text-left text-sm text-gray-200 border-collapse">
+                    <thead className="bg-gray-800/90 text-xs uppercase tracking-wider text-yellow-500 border-b border-gray-700">
                         <tr>
-                            <th>S No.</th>
-                            <th>Course Title</th>
-                            <th>Course Category</th>
-                            <th>Instructor</th>
-                            <th>Total Lectures</th>
-                            <th>Description</th>
-                            <th>Actions</th>
+                            <th className="py-4 px-4 text-center">S No.</th>
+                            <th className="py-4 px-4">Course Title</th>
+                            <th className="py-4 px-4">Course Category</th>
+                            <th className="py-4 px-4">Instructor</th>
+                            <th className="py-4 px-4 text-center">Total Lectures</th>
+                            <th className="py-4 px-4">Description</th>
+                            <th className="py-4 px-4 text-center">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="divide-y divide-gray-800">
                         {myCourses?.map((course, idx) => {
                             return(
-                                <tr key={course._id}>
-                                    <td className="align-middle">{idx+1}</td>
-                                    <td className="align-middle">
+                                <tr key={course._id} className="hover:bg-gray-800/50 transition-colors">
+                                    <td className="py-4 px-4 text-center font-medium text-gray-400">{idx+1}</td>
+                                    <td className="py-4 px-4 font-semibold text-white">
                                         <p className="w-40 line-clamp-2">{course?.title}</p>
                                     </td>
-                                    <td className="align-middle">
+                                    <td className="py-4 px-4 capitalize text-gray-300">
                                         {course?.category}
                                     </td>
-                                    <td className="align-middle">
+                                    <td className="py-4 px-4 text-gray-300">
                                         {course?.createdBy}
                                     </td>
-                                    <td className="align-middle">
+                                    <td className="py-4 px-4 text-center font-bold text-yellow-500">
                                         {course?.numbersOfLectures}
                                     </td>
-                                    <td className="align-middle">
-                                        <p className="w-80 line-clamp-2">{course?.description}</p>
+                                    <td className="py-4 px-4 text-gray-400">
+                                        <p className="w-64 line-clamp-2 text-xs leading-relaxed">{course?.description}</p>
                                     </td>
-                                    <td className="align-middle">
-                                        <div className="flex items-center gap-4">
+                                    <td className="py-4 px-4 text-center">
+                                        <div className="flex items-center justify-center gap-3">
                                             <button className="bg-green-500 hover:bg-green-600 transition-all ease-in-out duration-300 text-xl py-2 px-4 rounded-md font-bold" onClick={() => navigate("/course/displaylectures", {state: {...course}})}>
                                                 <BsCollectionPlayFill />
                                             </button>

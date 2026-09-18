@@ -137,8 +137,8 @@ function AdminDashboard(){
                         Create new course
                     </button>
                 </div>
-
-                <table className="table overflow-x-scroll">
+                <div>
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th>S No.</th>
@@ -165,7 +165,7 @@ function AdminDashboard(){
                                         {course?.createdBy}
                                     </td>
                                     <td className="align-middle">
-                                        {course?.numberOfLectures}
+                                        {course?.numbersOfLectures}
                                     </td>
                                     <td className="align-middle">
                                         <p className="w-80 line-clamp-2">{course?.description}</p>
@@ -185,6 +185,7 @@ function AdminDashboard(){
                         })}
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </HomeLayout>
